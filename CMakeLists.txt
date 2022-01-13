@@ -51,7 +51,8 @@ file(GLOB_RECURSE SOURCES "Startup/*.*" "Core/*.*" "Debug/*.*" "Peripheral/*.*" 
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/CH32V103C8T6.ld)
 
 add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
-add_link_options(-nostartfiles --specs=nano.specs --specs=nosys.specs)
+add_link_options(-march=rv32imac -mabi=ilp32 -nostartfiles --specs=nano.specs --specs=nosys.specs)
+add_link_options(-lgcc -lc -lm)
 add_link_options(-T ${LINKER_SCRIPT})
 
 add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT})
