@@ -14,7 +14,7 @@ set(SIZE                ${TOOLCHAIN_PATH}/riscv-none-embed-size.exe)
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
 # project settings
-project(template C CXX ASM)
+project(ch32v_template C CXX ASM)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
 
