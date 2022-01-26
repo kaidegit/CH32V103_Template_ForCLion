@@ -55,7 +55,7 @@ int main(void) {
 
     while (1) {
         GPIO_WriteBit(LED_GPIO_Port, LED_Pin, 1);
-        Delay_Ms(250);
+        Delay_Ms(1000);
         GPIO_WriteBit(LED_GPIO_Port, LED_Pin, 0);
         Delay_Ms(250);
     }
